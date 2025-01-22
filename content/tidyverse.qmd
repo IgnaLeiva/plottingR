@@ -3,7 +3,9 @@ title: "Your Data Science Superpower 🧙"
 ---
 
 ## The Tidyverse: Your Data Science Toolkit 🧰
-The **Tidyverse** is a collection of R packages that makes data science smoother, faster, and more fun! Here’s why it’s awesome:
+The **Tidyverse** is a collection of R packages that makes data science smoother, faster, and more fun! 
+
+Here’s why it’s awesome:
 
 - **Consistency:** Everything speaks the same “grammar,” making it easy to learn.
 - **Integration:** The packages are designed to play nicely together.

@@ -50,137 +50,6 @@
     ]
   },
   {
-    "objectID": "content/tidyverse.html",
-    "href": "content/tidyverse.html",
-    "title": "Your Data Science Superpower 🧙",
-    "section": "",
-    "text": "The Tidyverse is a collection of R packages that makes data science smoother, faster, and more fun! Here’s why it’s awesome:\n\nConsistency: Everything speaks the same “grammar,” making it easy to learn.\nIntegration: The packages are designed to play nicely together.\nProductivity Boost: It simplifies your workflow from data wrangling to eye-catching visuals.\n\nThe packages included are:\n\n\n\n\n\n\n\n\nCategory\nPackage(s)\nDescription\n\n\n\n\nData Wrangling\ndplyr\nFor filtering, summarizing, and transforming your data.\n\n\n\ntidyr\nHelps reshape and tidy your datasets.\n\n\nData Import\nreadr\nLoads data quickly from CSV, TSV, and other text formats.\n\n\n\nreadxl, googlesheets4\nFor reading Excel and Google Sheets files.\n\n\nData Visualization\nggplot2\nThe star of the show for creating beautiful and customizable plots.\n\n\nString Handling\nstringr\nSimplifies working with text and string data.\n\n\nDate and Time\nlubridate\nMakes date and time manipulation easy.\n\n\nProgramming Tools\npurrr\nAdds functional programming capabilities to make your code cleaner.",
-    "crumbs": [
-      "Tidyverse packege"
-    ]
-  },
-  {
-    "objectID": "content/tidyverse.html#the-tidyverse-your-data-science-toolkit",
-    "href": "content/tidyverse.html#the-tidyverse-your-data-science-toolkit",
-    "title": "Your Data Science Superpower 🧙",
-    "section": "",
-    "text": "The Tidyverse is a collection of R packages that makes data science smoother, faster, and more fun! Here’s why it’s awesome:\n\nConsistency: Everything speaks the same “grammar,” making it easy to learn.\nIntegration: The packages are designed to play nicely together.\nProductivity Boost: It simplifies your workflow from data wrangling to eye-catching visuals.\n\nThe packages included are:\n\n\n\n\n\n\n\n\nCategory\nPackage(s)\nDescription\n\n\n\n\nData Wrangling\ndplyr\nFor filtering, summarizing, and transforming your data.\n\n\n\ntidyr\nHelps reshape and tidy your datasets.\n\n\nData Import\nreadr\nLoads data quickly from CSV, TSV, and other text formats.\n\n\n\nreadxl, googlesheets4\nFor reading Excel and Google Sheets files.\n\n\nData Visualization\nggplot2\nThe star of the show for creating beautiful and customizable plots.\n\n\nString Handling\nstringr\nSimplifies working with text and string data.\n\n\nDate and Time\nlubridate\nMakes date and time manipulation easy.\n\n\nProgramming Tools\npurrr\nAdds functional programming capabilities to make your code cleaner.",
-    "crumbs": [
-      "Tidyverse packege"
-    ]
-  },
-  {
-    "objectID": "content/tidyverse.html#ggplot2-your-data-visualisations-best-friend",
-    "href": "content/tidyverse.html#ggplot2-your-data-visualisations-best-friend",
-    "title": "Your Data Science Superpower 🧙",
-    "section": "🎨 ggplot2: Your data visualisation’s best friend",
-    "text": "🎨 ggplot2: Your data visualisation’s best friend\nAt the heart of the Tidyverse lies ggplot2, the ultimate tool for creating stunning visualizations:\n\nGrammar of Graphics: Build plots layer by layer for maximum control and creativity.\nVersatility: From scatterplots to histograms to pie charts, ggplot2 does it all.\nEasy to Customize: Quickly add titles, labels, and themes without breaking a sweat.\nAutomation: Handles the nitty-gritty so you can focus on insights, not formatting.\n\nHeads up! For ultra-customized visuals, you might need a bit of extra coding or help from external tools.\nBut for most tasks, ggplot2 is a powerhouse! 💪",
-    "crumbs": [
-      "Tidyverse packege"
-    ]
-  },
-  {
-    "objectID": "content/project_template.html",
-    "href": "content/project_template.html",
-    "title": "Porject template",
-    "section": "",
-    "text": "PhEpiGit provides a project_template repository that should be used each time a member creates a new repository. This template includes all the folders specified in PhEpi-1-05_Reproduzierbares Arbeiten.\nImportant Information:\n\n.gitignore file: This specifies which files and folders will be ignored in the pushing process to the remote repository (GitHub). We have already included there the data folder which may contain sensitive information (e.g. patient data). Please make sure to save all data in that folder, otherwise include the name of the data file in the .gitignore file. More information can be found here."
-  },
-  {
-    "objectID": "content/new_repo.html",
-    "href": "content/new_repo.html",
-    "title": "Creating Your First Repository on PhEpiGit",
-    "section": "",
-    "text": "You can create a new repository using the command line, RStudio, or GitHub. However, we’ll focus on GitHub here because it helps us stick to our reproducible research SOP.\nOnce you’re part of the PhEpiGit, you have write permissions. That means you can clone, pull, and push to all our PhEpiGit repositories.\nTo set up a new GitHub repository:\n\nGo to the upper-right corner of the PhEpiGit and select +, then select New repository\n\n\n\n\n\n\n\nFigure 1: Create a new repository\n\n\n\n\n\n\nChoose the Pharmacoepidemiology-UKHD/project_template to initiate your new repository -A-. This selection will automatically assign the PhEpi as the owner. Next, assign a name to your repository -B- and select an appropriate visibility option -C-. You may also include a description if desired. Lastly, click Create repositry\n\n\n\n\n\n\n\nFigure 2: Create a new repository window\n\n\n\n\nFigure 3 shows a walkthrough of how a new repository takes shape. While GitHub enables repository management tasks, complete control can be achieved using a command line text editor or tools like RStudio. This document underscores utilising RStudio as a central element for effective GitHub repository management.\n\n\n\n\n\n\nFigure 3: New repository content based on PhEpi-1-05_Reproduzierbares Arbeiten\n\n\n\nThe next step is to clone your newly created GitHub repository to your local machine."
-  },
-  {
-    "objectID": "content/copy_repo.html",
-    "href": "content/copy_repo.html",
-    "title": "Cloning GitHub Repositories to Your Local Machine",
-    "section": "",
-    "text": "This process starts by:\n\nAs shown in Figure 1, -A- Click Code to display a window containing options for cloning the repository. -B- Copy the HTTPS link provided. The subsequent step involves adding the new repository to your local machine.\n\n\n\n\n\n\n\nFigure 1: Options to clone the repository.\n\n\n\n\n\nLog-in into your R Server and access the RStudio menu bar, choose File \\(\\rightarrow\\) New Project \\(\\rightarrow\\) Version Control \\(\\rightarrow\\) Git. This displays the window depicted in Figure 4. There, -A- insert the copied HTTPS link, -B- name the project, and -C- select a location for saving the local repository.\n\n\n\n\n\n\n\nFigure 2: Git window to clone the GitHub repository.\n\n\n\n\nAfter clicking the Create Project (Figure 4), a window pops up (Figure 3) requesting the -A- GitHub username and -B- password. Keep in mind that instead of using a password, you’ll need to provide a personal Token.\n\n\n\n\n\n\nFigure 3: Git credential windows to clone the GitHub repository.\n\n\n\nFigure 4 showcases the cloned local repository. Note that this process generates a local .Rproj file -A-.\n\n\n\n\n\n\nFigure 4: The “Files” tab in RStudio displays the repository files along with the essential .Rproj file (R project)."
-  },
-  {
-    "objectID": "content/acknowledgements.html",
-    "href": "content/acknowledgements.html",
-    "title": "Acknowledgments",
-    "section": "",
-    "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
-  },
-  {
-    "objectID": "content/publishing.html",
-    "href": "content/publishing.html",
-    "title": "Publishing",
-    "section": "",
-    "text": "To get your Quarto webpage to show up with the url\nyou have a few steps."
-  },
-  {
-    "objectID": "content/publishing.html#turn-on-github-pages-for-your-repo",
-    "href": "content/publishing.html#turn-on-github-pages-for-your-repo",
-    "title": "Publishing",
-    "section": "Turn on GitHub Pages for your repo",
-    "text": "Turn on GitHub Pages for your repo\n\nTurn on GitHub Pages under Settings &gt; Pages . You will set pages to be made from the gh-pages branch and the root directory.\nTurn on GitHub Actions under Settings &gt; Actions &gt; General\n\nThe GitHub Action will automatically recreate your website when you push to GitHub after you do the initial gh-pages set-up"
-  },
-  {
-    "objectID": "content/publishing.html#do-your-first-publish-to-gh-pages",
-    "href": "content/publishing.html#do-your-first-publish-to-gh-pages",
-    "title": "Publishing",
-    "section": "Do your first publish to gh-pages",
-    "text": "Do your first publish to gh-pages\nThe first time you publish to gh-pages, you need to do so locally.\n\nOn your local computer, open a terminal window and cd to your repo directory. Here is what that cd command looks like for me. You command will look different because your local repo will be somewhere else on your computer.\n\ncd ~/Documents/GitHub/NOAA-quarto-simple\n\nPublish to the gh-pages. In the terminal type\n\nquarto publish gh-pages\nThis is going to render your webpage and then push the _site contents to the gh-pages branch."
-  },
-  {
-    "objectID": "content/publishing.html#dont-like-using-gh-pages",
-    "href": "content/publishing.html#dont-like-using-gh-pages",
-    "title": "Publishing",
-    "section": "Don’t like using gh-pages?",
-    "text": "Don’t like using gh-pages?\nIn some cases, you don’t want your website on the gh-pages branch. For example, if you are creating releases and you want the website pages archived in that release, then you won’t want your website pages on the gh-pages branch.\nHere are the changes you need to make if you to avoid gh-pages branch.\n\nAt the top of _quarto.yml add the following:\n\nproject: \n  type: website\n  output-dir: docs\n\nOn GitHub under Settings &gt; Pages set pages to be made from the main branch and the docs directory.\nMake sure docs is not listed in .gitignore\nPublish the site the first time locally using quarto publish from the terminal\nChange the GitHub Action because you can’t use quarto publish gh-pages. You’ll need to push to the main branch yourself (in the GitHub Action)\n\non:\n  push:\n    branches: main\n\nname: Render and Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    env:\n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}\n\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v2 \n        \n      - name: Set up R (needed for Rmd)\n        uses: r-lib/actions/setup-r@v2\n\n      - name: Install packages (needed for Rmd)\n        run: Rscript -e 'install.packages(c(\"rmarkdown\", \"knitr\", \"jsonlite\"))'\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n        with:\n          # To install LaTeX to build PDF book \n          # tinytex: true \n          # uncomment below and fill to pin a version\n          # version: 0.9.600\n      \n      - name: Render Quarto Project\n        uses: quarto-dev/quarto-actions/render@v2\n        with:\n          to: html\n\n      - name: Set up Git\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n\n      - name: Commit all changes and push\n        run: |\n          git add -A && git commit -m 'Build site' || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\""
-  },
-  {
-    "objectID": "content/acceptpull.html",
-    "href": "content/acceptpull.html",
-    "title": "Checking and accepting a pull request",
-    "section": "",
-    "text": "After a collaborator has initiated a merge request, the repository owner generally reviews and accepts pull requests.\nTo accept a submitted pull request, follow these steps (see Figure 1):\n\nGo to the Pull requests tab in the GitHub repository -A-. Here, you’ll find a list of requests where you can take various actions.\nAccess a specific request by clicking on the pull request name -B-.\n\nThis allows you to thoroughly review the proposed changes and decide whether to accept, request modifications, or close the request.\n\n\n\n\n\n\nFigure 1: Checking a pull request on GitHub.\n\n\n\nFigure 2 displays the content of a pull request, providing information on the commit -A- and the request description -B-. Using Add a comment section -C-, both the repository owner and contributor can exchange messages for clarifications before proceeding to merge -D-.\nAfter the pull request has been accepted and merged, its status will transition from Open to Merged. Additionally, if the branch is no longer needed, it can be safely deleted.\n\n\n\n\n\n\nFigure 2: Description of an opened pulling request."
-  },
-  {
-    "objectID": "content/initial.html",
-    "href": "content/initial.html",
-    "title": "Sign up on Posit Cloud",
-    "section": "",
-    "text": "Here’s everything you need to succeed: Guides for the r-cubed courses\nA big thank you to the instructors for their guidance! 👏",
-    "crumbs": [
-      "Sign up on Posit Cloud"
-    ]
-  },
-  {
-    "objectID": "content/newbranchcommit.html",
-    "href": "content/newbranchcommit.html",
-    "title": "Committing and Pushing to/from new Branch",
-    "section": "",
-    "text": "Once you’ve created your branch, you can commit and push your work to your GitHub branch, following the instructions outlined in Committing and Pushing - origin/main Branch. Just ensure that you’re executing these actions from your branch.\nIf you want your work to be merged into the main/origin branch, you need to open a pull request on PhEpiGit. This action requests the merge and serves as a communication tool, especially with the repository owner, allowing for discussion and review of your changes before they are integrated.\nAfter pushing your work, go to PhEpiGit and locate the repository you are collaborating with. Click main to switch to the member branch (Figure 1). From there, you can initiate the pull request process to merge your changes into the main/origin branch.\n\n\n\n\n\n\nFigure 1: Switching branches in a GitHub repository.\n\n\n\nOnce on the selected branch NEmp, as shown in Figure 2, click -A- Contribute, then Open pull request -B-. A window pops up where a title and description for the request can be provided. After submitting the request, the repository owner can check and accept the collaborator’s work.\n\n\n\n\n\n\nFigure 2: Open a pull request for a GitHub repository branch."
-  },
-  {
-    "objectID": "content/commit_push_main.html",
-    "href": "content/commit_push_main.html",
-    "title": "Committing and Pushing to/from the origin/main Branch",
-    "section": "",
-    "text": "Committing saves all your new work or changes made to a local repository. Figure 1 shows how to commit changes using the Rstudio Git tab.\nStarts by:\n\nGo to the Git tab -A-. The window shows all new files or those with modifications\nSelect the files to be committed by checking the boxes -B-.\nClick Commit to open the review changes window (the review window also allows file selection or deselection)-C-.\n\n\n\n\n\n\n\nFigure 1: Git windows showing added or modified files.\n\n\n\nNote: Committing changes can also be done from a branch different to main/origin, as described check in Section 5.6. Commit and push– new branch\nThe review window (Figure 2) displays changes and the repository/project history. Once files are selected (checked boxes), -A-. add a brief commit message indicating the change. Finally, click Commit to complete the process.\n\n\n\n\n\n\nFigure 2: Review window.\n\n\n\nAfter clicking Commit (Figure 2), a window pops up indicating the state of the commit. Figure 3 provides a summary of the changes made in the commit process.\n\n\n\n\n\n\nFigure 3: Git Commit window describing the commit changes."
-  },
-  {
-    "objectID": "content/commit_push_main.html#committing",
-    "href": "content/commit_push_main.html#committing",
-    "title": "Committing and Pushing to/from the origin/main Branch",
-    "section": "",
-    "text": "Committing saves all your new work or changes made to a local repository. Figure 1 shows how to commit changes using the Rstudio Git tab.\nStarts by:\n\nGo to the Git tab -A-. The window shows all new files or those with modifications\nSelect the files to be committed by checking the boxes -B-.\nClick Commit to open the review changes window (the review window also allows file selection or deselection)-C-.\n\n\n\n\n\n\n\nFigure 1: Git windows showing added or modified files.\n\n\n\nNote: Committing changes can also be done from a branch different to main/origin, as described check in Section 5.6. Commit and push– new branch\nThe review window (Figure 2) displays changes and the repository/project history. Once files are selected (checked boxes), -A-. add a brief commit message indicating the change. Finally, click Commit to complete the process.\n\n\n\n\n\n\nFigure 2: Review window.\n\n\n\nAfter clicking Commit (Figure 2), a window pops up indicating the state of the commit. Figure 3 provides a summary of the changes made in the commit process.\n\n\n\n\n\n\nFigure 3: Git Commit window describing the commit changes."
-  },
-  {
-    "objectID": "content/commit_push_main.html#pushing",
-    "href": "content/commit_push_main.html#pushing",
-    "title": "Committing and Pushing to/from the origin/main Branch",
-    "section": "Pushing",
-    "text": "Pushing\nWhen pushing you will send all changes made to the GitHub repository. As depicted in Figure 4:\n\nOnce in the Git tab -A-. you will see a message indicating that the local repository is ahead of the remote one (GitHub)-B-. . Please, note that you are using the main/origin branch.\nClick Push to initiate the pushing process -C-. Provide GitHub identification when prompted. Just like the commit process, clicking the push button brings up a Git Push window providing the information related to this action.\n\n\n\n\n\n\n\nFigure 4: Git tab on RStudio ready to push data to the main/origin branch.\n\n\n\nNote: Before proceeding with subsequent push actions, ensure your local repository is up-to-date. You can do this by clicking “Pull” in the Git tab."
-  },
-  {
     "objectID": "content/R.html",
     "href": "content/R.html",
     "title": "R and RStudio",
@@ -221,32 +90,44 @@
     ]
   },
   {
-    "objectID": "content/definitions.html",
-    "href": "content/definitions.html",
-    "title": "Terms, definitions and abbreviation",
+    "objectID": "content/initial.html",
+    "href": "content/initial.html",
+    "title": "Sign up on Posit Cloud",
     "section": "",
-    "text": "Term\nDefinition\n\n\n\n\nCollaboration\nShared project or technical/expertise support provided to other researchers.\n\n\nCommit\nInvolves saving changes made in your local repository. Each commit represents a snapshot of the project at specific point in time.\n\n\nGitHub\nA web-based interface that uses Git for version control\n\n\nPhEpi\nPharmacoepidemiology unit\n\n\nPhEpiGit\nPharmacoepidemiology unit GitHub\n\n\nRepository\nCentralized storage space that holds a project’s files and their complete history (track changes)\n\n\nR projects\nStructured environment created within the integrated development environment (IDE). It includes a dedicated project directory, a “.Rproj” configuration file, and isolated settings.\n\n\nSOP\nStandard operating procedure\n\n\nPushing\nRefers to sending committed (saved) changes from your local repository to a remote repository (GitHub).\n\n\nVCS\nVersion Control System. A VCS facilitates the tracking and managing of changes made to the project over time, encompassing any modification to folders, files, and code."
+    "text": "Here’s everything you need to succeed: Guides for the r-cubed courses\nA big thank you to the instructors for their guidance! 👏",
+    "crumbs": [
+      "Sign up on Posit Cloud"
+    ]
   },
   {
-    "objectID": "content/add-content.html",
-    "href": "content/add-content.html",
-    "title": "Customize",
+    "objectID": "content/tidyverse.html",
+    "href": "content/tidyverse.html",
+    "title": "Your Data Science Superpower 🧙",
     "section": "",
-    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
+    "text": "The Tidyverse is a collection of R packages that makes data science smoother, faster, and more fun!\nHere’s why it’s awesome:\n\nConsistency: Everything speaks the same “grammar,” making it easy to learn.\nIntegration: The packages are designed to play nicely together.\nProductivity Boost: It simplifies your workflow from data wrangling to eye-catching visuals.\n\nThe packages included are:\n\n\n\n\n\n\n\n\nCategory\nPackage(s)\nDescription\n\n\n\n\nData Wrangling\ndplyr\nFor filtering, summarizing, and transforming your data.\n\n\n\ntidyr\nHelps reshape and tidy your datasets.\n\n\nData Import\nreadr\nLoads data quickly from CSV, TSV, and other text formats.\n\n\n\nreadxl, googlesheets4\nFor reading Excel and Google Sheets files.\n\n\nData Visualization\nggplot2\nThe star of the show for creating beautiful and customizable plots.\n\n\nString Handling\nstringr\nSimplifies working with text and string data.\n\n\nDate and Time\nlubridate\nMakes date and time manipulation easy.\n\n\nProgramming Tools\npurrr\nAdds functional programming capabilities to make your code cleaner.",
+    "crumbs": [
+      "Tidyverse packege"
+    ]
   },
   {
-    "objectID": "content/add-content.html#edit-and-add-your-pages",
-    "href": "content/add-content.html#edit-and-add-your-pages",
-    "title": "Customize",
+    "objectID": "content/tidyverse.html#the-tidyverse-your-data-science-toolkit",
+    "href": "content/tidyverse.html#the-tidyverse-your-data-science-toolkit",
+    "title": "Your Data Science Superpower 🧙",
     "section": "",
-    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
+    "text": "The Tidyverse is a collection of R packages that makes data science smoother, faster, and more fun!\nHere’s why it’s awesome:\n\nConsistency: Everything speaks the same “grammar,” making it easy to learn.\nIntegration: The packages are designed to play nicely together.\nProductivity Boost: It simplifies your workflow from data wrangling to eye-catching visuals.\n\nThe packages included are:\n\n\n\n\n\n\n\n\nCategory\nPackage(s)\nDescription\n\n\n\n\nData Wrangling\ndplyr\nFor filtering, summarizing, and transforming your data.\n\n\n\ntidyr\nHelps reshape and tidy your datasets.\n\n\nData Import\nreadr\nLoads data quickly from CSV, TSV, and other text formats.\n\n\n\nreadxl, googlesheets4\nFor reading Excel and Google Sheets files.\n\n\nData Visualization\nggplot2\nThe star of the show for creating beautiful and customizable plots.\n\n\nString Handling\nstringr\nSimplifies working with text and string data.\n\n\nDate and Time\nlubridate\nMakes date and time manipulation easy.\n\n\nProgramming Tools\npurrr\nAdds functional programming capabilities to make your code cleaner.",
+    "crumbs": [
+      "Tidyverse packege"
+    ]
   },
   {
-    "objectID": "content/add-content.html#add-your-pages-the-project",
-    "href": "content/add-content.html#add-your-pages-the-project",
-    "title": "Customize",
-    "section": "Add your pages the project",
-    "text": "Add your pages the project\n\nAdd the files to _quarto.yml"
+    "objectID": "content/tidyverse.html#ggplot2-your-data-visualisations-best-friend",
+    "href": "content/tidyverse.html#ggplot2-your-data-visualisations-best-friend",
+    "title": "Your Data Science Superpower 🧙",
+    "section": "🎨 ggplot2: Your data visualisation’s best friend",
+    "text": "🎨 ggplot2: Your data visualisation’s best friend\nAt the heart of the Tidyverse lies ggplot2, the ultimate tool for creating stunning visualizations:\n\nGrammar of Graphics: Build plots layer by layer for maximum control and creativity.\nVersatility: From scatterplots to histograms to pie charts, ggplot2 does it all.\nEasy to Customize: Quickly add titles, labels, and themes without breaking a sweat.\nAutomation: Handles the nitty-gritty so you can focus on insights, not formatting.\n\nHeads up! For ultra-customized visuals, you might need a bit of extra coding or help from external tools.\nBut for most tasks, ggplot2 is a powerhouse! 💪",
+    "crumbs": [
+      "Tidyverse packege"
+    ]
   },
   {
     "objectID": "content/data.html",
