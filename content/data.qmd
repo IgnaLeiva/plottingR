@@ -1,0 +1,8 @@
+---
+title: Download the data
+---
+
+## Download the Data
+
+You can download the dataset here:  
+[Download the data](/data/healthcare_dataset.csv)

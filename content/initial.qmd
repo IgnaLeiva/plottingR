@@ -1,0 +1,8 @@
+---
+title: "Sign up on Posit Cloud"
+---
+
+
+Here’s everything you need to succeed: [Guides for the r-cubed courses](https://guides.rostools.org/posit-cloud)
+
+A big thank you to the instructors for their guidance! 👏

@@ -1,0 +1,32 @@
+/*-- scss:defaults --*/
+
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+
+$font-family: "Atkinson Hyperlegible", sans-serif;
+
+.numberCircle {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background: #004a6f;
+    border: 2px solid #004a6f;
+    color: white;
+    text-align: center;
+    font: 15px Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+.numberCircleSmall {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    background: #004a6f;
+    border: 2px solid #004a6f;
+    color: white;
+    text-align: center;
+    font: 15px Arial, sans-serif;
+    font-weight: bold;
+}

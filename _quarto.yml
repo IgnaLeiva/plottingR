@@ -1,0 +1,65 @@
+project: 
+  type: website
+  output-dir: docs
+
+website: 
+  page-navigation: true
+  title: "PhEpiGit" 
+  site-url: "https://www.klinikum.uni-heidelberg.de/en/kliniken-institute/kliniken/zentrum-fuer-innere-medizin-krehl-klinik/dept-of-clinical-pharmacology-and-pharmacoepidemiology" 
+  repo-url: "https://pharmacoepidemiology-ukhd.github.io/SOPGitHub"
+  #repo-actions: [edit, source, issue]
+  favicon: images/favicon.ico
+  
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    left: "&copy; CC-1.0"
+  
+  sidebar:
+    background: "white"
+    title: "UKHD"
+    #logo: logo.svg
+    logo: ReproducibiliTeaLogo.png
+    pinned: true
+    align: center
+    tools: 
+      - icon: globe
+        href: https://www.klinikum.uni-heidelberg.de/en/kliniken-institute/kliniken/zentrum-fuer-innere-medizin-krehl-klinik/dept-of-clinical-pharmacology-and-pharmacoepidemiology
+        text: "UKHD"
+      - icon: github
+        href: https://github.com/Pharmacoepidemiology-UKHD
+        text: "PhEpi"
+
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: content/initial.qmd
+        text: Sign up on Posit Cloud
+      - href: content/R.qmd
+        text: R & RStudio
+      - href: content/tidyverse.qmd
+        text: Tidyverse packege
+      - href: content/writingCode.qmd
+        text: Write your code
+      - href: content/data.qmd
+        text: Data sets
+
+   
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss] 
+      dark: [cosmo, theme-dark.scss]
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+
+
+filters:
+  - include-files.lua
+  - quarto
+
+  

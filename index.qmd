@@ -1,0 +1,40 @@
+---
+title: "Plotting with R"
+subtitle: "Reproducibilitea Journal Club UKHD"
+author: "Ignacio Leiva"
+page-layout: full
+---
+
+
+
+## Welcome 📊
+
+Welcome to this short and hands-on course on Plotting with R! Whether you’re just starting or want to sharpen your skills, this session will help you create clear, beautiful, and customized data visualizations using R.
+
+We’ll cover:
+
+- 	Basics of using ggplot2
+- Customizing labels, colors, and themes
+- Advanced tips for polished, publication-ready plots
+
+Feel free to experiment, ask questions, and have fun with your data!
+
+Let’s get started! 🚀 
+
+
+## Info session
+
+## Course Schedule
+
+The course consists of 4 sessions, all held at the same time and location:
+
+### 📅 **Session Dates**:
+- January 30
+- February 13
+- February 27
+- March 13
+
+⏰ **Time**: 10::30 AM - 12:00 PM 
+📍 **Location**: [Insert Location]
+
+Looking forward to seeing you there!
