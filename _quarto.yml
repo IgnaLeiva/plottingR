@@ -43,6 +43,8 @@ website:
         text: Tidyverse packege
       - href: content/writingCode.qmd
         text: Write your code
+      - href: content/ggplotgallery.qmd
+        text: The R Graph Gallery
       - href: content/data.qmd
         text: Data sets
 

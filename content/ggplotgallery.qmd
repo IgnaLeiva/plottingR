@@ -1,0 +1,8 @@
+---
+title: "Discover The R Graph Gallery"
+---
+
+The **R Graph Gallery** is your go-to resource for stunning data visualizations created with R. From basic plots to complex, interactive graphics, it offers a vast collection of examples accompanied by reproducible R code. Perfect for learning and inspiration, the gallery helps turn your data into clear, compelling visuals.
+
+
+Explore the [gallery](https://r-graph-gallery.com) and elevate your data storytelling.

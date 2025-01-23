@@ -6,3 +6,6 @@ title: "Sign up on Posit Cloud"
 Here’s everything you need to succeed: [Guides for the r-cubed courses](https://guides.rostools.org/posit-cloud)
 
 A big thank you to the instructors for their guidance! 👏
+
+
+After creating the account and a `work space` create project and named it `My_first_project`. To do it, follow the **An Introduction R** [tutorial](https://intro2r.com/rsprojs.html). No need to make the last suggestion.

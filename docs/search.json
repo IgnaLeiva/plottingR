@@ -94,9 +94,19 @@
     "href": "content/initial.html",
     "title": "Sign up on Posit Cloud",
     "section": "",
-    "text": "Here’s everything you need to succeed: Guides for the r-cubed courses\nA big thank you to the instructors for their guidance! 👏",
+    "text": "Here’s everything you need to succeed: Guides for the r-cubed courses\nA big thank you to the instructors for their guidance! 👏\nAfter creating the account and a work space create project and named it My_first_project. To do it, follow the An Introduction R tutorial. No need to make the last suggestion.",
     "crumbs": [
       "Sign up on Posit Cloud"
+    ]
+  },
+  {
+    "objectID": "content/ggplotgallery.html",
+    "href": "content/ggplotgallery.html",
+    "title": "Discover The R Graph Gallery",
+    "section": "",
+    "text": "The R Graph Gallery is your go-to resource for stunning data visualizations created with R. From basic plots to complex, interactive graphics, it offers a vast collection of examples accompanied by reproducible R code. Perfect for learning and inspiration, the gallery helps turn your data into clear, compelling visuals.\nExplore the gallery and elevate your data storytelling.",
+    "crumbs": [
+      "The R Graph Gallery"
     ]
   },
   {
