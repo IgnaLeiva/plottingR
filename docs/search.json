@@ -94,7 +94,7 @@
     "href": "content/initial.html",
     "title": "Sign up on Posit Cloud",
     "section": "",
-    "text": "Here’s everything you need to succeed: Guides for the r-cubed courses\nA big thank you to the instructors for their guidance! 👏\nAfter creating the account and a work space create project and named it My_first_project. To do it, follow the An Introduction R tutorial. No need to make the last suggestion.",
+    "text": "Here’s everything you need to succeed: Guides for the r-cubed courses\nA big thank you to the instructors for their guidance! 👏\nAfter you have created an account and a workspace, create a project and name it my_first_project. To do this, follow the An Introduction to R tutorial. The last suggestion is not necessary.",
     "crumbs": [
       "Sign up on Posit Cloud"
     ]
