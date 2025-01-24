@@ -2,7 +2,9 @@
 title: Download the data
 ---
 
-## Download the Data
+## Dataset from [**Kagle**](https://www.kaggle.com)
 
-You can download the dataset here:  
-[Download the data](/data/healthcare_dataset.csv)
+- [Student Mental health](https://www.kaggle.com/datasets/shariful07/student-mental-health). [Download](/data/Student_Mental_health.csv)
+
+- [Diabetes Health Indicators](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset). [Download](/data/diabetes_012_health_indicators_BRFSS2015.csv) 
+
