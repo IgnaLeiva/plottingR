@@ -144,7 +144,7 @@
     "href": "content/data.html",
     "title": "Download the data",
     "section": "",
-    "text": "Student Mental health. Download\nDiabetes Health Indicators. Download",
+    "text": "[Student Mental health.] (https://www.kaggle.com/datasets/shariful07/student-mental-health) Download\nYou can download the dataset here:\nDownload the data",
     "crumbs": [
       "Data sets"
     ]
@@ -155,6 +155,16 @@
     "title": "Download the data",
     "section": "",
     "text": "Student Mental health. Download\nDiabetes Health Indicators. Download",
+    "crumbs": [
+      "Data sets"
+    ]
+  },
+  {
+    "objectID": "content/data.html#datast-from-kagle",
+    "href": "content/data.html#datast-from-kagle",
+    "title": "Download the data",
+    "section": "",
+    "text": "[Student Mental health.] (https://www.kaggle.com/datasets/shariful07/student-mental-health) Download\nYou can download the dataset here:\nDownload the data",
     "crumbs": [
       "Data sets"
     ]
