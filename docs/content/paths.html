@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sign up on Posit Cloud – PhEpiGit</title>
+<title>Understanding Paths, Root, and Working Directory – PhEpiGit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/R.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../content/data.html" rel="next">
+<link href="../content/ggplotgallery.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/initial.html">Sign up on Posit Cloud</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/paths.html">Understanding Paths, Root, and Working Directory</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/initial.html" class="sidebar-item-text sidebar-link active">
+  <a href="../content/initial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sign up on Posit Cloud</span></a>
   </div>
 </li>
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/paths.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/paths.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Understanding Paths, Root, and Working Directory</span></a>
   </div>
 </li>
@@ -169,15 +169,37 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#paths-the-basics" id="toc-paths-the-basics" class="nav-link active" data-scroll-target="#paths-the-basics">Paths: The Basics</a>
+  <ul class="collapse">
+  <li><a href="#what-is-the-root" id="toc-what-is-the-root" class="nav-link" data-scroll-target="#what-is-the-root">What Is the Root?</a>
+  <ul class="collapse">
+  <li><a href="#example-of-a-file-structure" id="toc-example-of-a-file-structure" class="nav-link" data-scroll-target="#example-of-a-file-structure">Example of a File Structure</a></li>
+  </ul></li>
+  <li><a href="#what-is-the-working-directory-wd" id="toc-what-is-the-working-directory-wd" class="nav-link" data-scroll-target="#what-is-the-working-directory-wd">What Is the Working Directory (WD)?</a>
+  <ul class="collapse">
+  <li><a href="#visual-example-of-wd" id="toc-visual-example-of-wd" class="nav-link" data-scroll-target="#visual-example-of-wd">Visual Example of WD</a></li>
+  </ul></li>
+  <li><a href="#paths-absolute-vs.-relative" id="toc-paths-absolute-vs.-relative" class="nav-link" data-scroll-target="#paths-absolute-vs.-relative">Paths: Absolute vs.&nbsp;Relative</a>
+  <ul class="collapse">
+  <li><a href="#absolute-path" id="toc-absolute-path" class="nav-link" data-scroll-target="#absolute-path">Absolute Path</a></li>
+  <li><a href="#relative-path" id="toc-relative-path" class="nav-link" data-scroll-target="#relative-path">Relative Path</a></li>
+  </ul></li>
+  <li><a href="#example-in-r-project" id="toc-example-in-r-project" class="nav-link" data-scroll-target="#example-in-r-project">Example in R project</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sign up on Posit Cloud</h1>
+<h1 class="title">Understanding Paths, Root, and Working Directory</h1>
 </div>
 
 
@@ -194,11 +216,79 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Here’s everything you need to succeed: <a href="https://guides.rostools.org/posit-cloud">Guides for the r-cubed courses</a></p>
-<p>A big thank you to the instructors for their guidance! 👏</p>
-<p>After you have created an account and a <code>workspace</code>, create a project and name it <code>my_first_project</code>. To do this, follow the <strong>An Introduction to R</strong> <a href="https://intro2r.com/rsprojs.html">tutorial</a>. The last suggestion is not necessary.</p>
+<section id="paths-the-basics" class="level1">
+<h1>Paths: The Basics</h1>
+<p>When working on an <strong>RStudio project</strong>, you often need to tell RStudio where to find files like images, data, or other documents. This is done using <strong>paths</strong>. To understand paths, let’s define two important terms: <strong>root</strong> and <strong>working directory</strong>.</p>
+<hr>
+<section id="what-is-the-root" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-root">What Is the Root?</h2>
+<p>The <strong>root</strong> is the starting point of your file system, usually represented by a drive letter like <code>C:\</code> or <code>D:\</code> in Windows.</p>
+<section id="example-of-a-file-structure" class="level3">
+<h3 class="anchored" data-anchor-id="example-of-a-file-structure">Example of a File Structure</h3>
+<pre class="plaintext"><code>C:\ (Root)
+│
+├── Users\
+│   ├── yourName\
+│   │   └── My_RStudio_Project\
+│   │       ├── index.qmd
+│   │       └── data\
+│   │           └── dataset.csv
+</code></pre>
+<p>Here, the root is <code>C:\</code>, and all files and folders are branches that stem from it.</p>
+</section>
+</section>
+<section id="what-is-the-working-directory-wd" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-working-directory-wd">What Is the Working Directory (WD)?</h2>
+<p>The <strong>working directory</strong> is the folder you are currently working in. Think of it as your current location in the file tree.</p>
+<p><strong>For example:</strong></p>
+<ul>
+<li><p>If your working directory is <code>C:\Users\yourName\My_RStudio_Project\</code>, the files like <code>index.qmd</code> and the <code>data\</code> folder are directly accessible.</p></li>
+<li><p>You don’t need to start from the root <code>(C:\)</code> every time. Instead, you can use <em>relative paths</em> to refer to files.</p></li>
+</ul>
+<section id="visual-example-of-wd" class="level3">
+<h3 class="anchored" data-anchor-id="visual-example-of-wd">Visual Example of WD</h3>
+<pre class="plaintext"><code>Working Directory (WD): C:\Users\yourName\My_RStudio_Project\
+│
+├── index.qmd
+├── data\
+│   └── dataset.csv
+└── images\
+    └── plot.png</code></pre>
+</section>
+</section>
+<section id="paths-absolute-vs.-relative" class="level2">
+<h2 class="anchored" data-anchor-id="paths-absolute-vs.-relative">Paths: Absolute vs.&nbsp;Relative</h2>
+<section id="absolute-path" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-path">Absolute Path</h3>
+<p>An absolute path starts from the root (e.g., <code>C:\</code>) and gives the full location of a file.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li><p>To access dataset.csv: <code>C:\Users\yourName\My_RStudio_Project\data\dataset.csv</code></p></li>
+<li><p>To access plot.png: <code>C:\Users\yourName\My_RStudio_Project\images\plot.png</code></p></li>
+</ul>
+</section>
+<section id="relative-path" class="level3">
+<h3 class="anchored" data-anchor-id="relative-path">Relative Path</h3>
+<p>A relative path starts from the working directory and is shorter because it doesn’t include the root.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li><p>If your working directory is <code>C:\Users\yourName\My_RStudio_Project\</code>, to access <code>dataset.csv</code> in the data folder: <code>./data/dataset.csv</code></p></li>
+<li><p>To access plot.png in the images folder: <code>./images/plot.png</code></p></li>
+</ul>
+</section>
+</section>
+<section id="example-in-r-project" class="level2">
+<h2 class="anchored" data-anchor-id="example-in-r-project">Example in R project</h2>
+<p>Here’s how to use these paths in an R script file:</p>
+<ul>
+<li><p>Using Absolute Paths (Not Recommended): <code>read.csv("C:/Users/yourName/My_RStudio_Project/data/dataset.csv")</code></p></li>
+<li><p>Using Relative Paths (Recommended): <code>read.csv("./data/dataset.csv")</code></p></li>
+</ul>
+<p>The second option (relative paths) is better because it makes your project portable, meaning others can use it without needing to change the file paths.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -764,13 +854,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Home">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
+      <a href="../content/ggplotgallery.html" class="pagination-link" aria-label="The R Graph Gallery">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The R Graph Gallery</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/R.html" class="pagination-link" aria-label="R &amp; RStudio">
-        <span class="nav-page-text">R &amp; RStudio</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/data.html" class="pagination-link" aria-label="Data sets">
+        <span class="nav-page-text">Data sets</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

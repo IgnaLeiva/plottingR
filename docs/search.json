@@ -90,6 +90,56 @@
     ]
   },
   {
+    "objectID": "content/paths.html",
+    "href": "content/paths.html",
+    "title": "Understanding Paths, Root, and Working Directory",
+    "section": "",
+    "text": "When working on an RStudio project, you often need to tell RStudio where to find files like images, data, or other documents. This is done using paths. To understand paths, let’s define two important terms: root and working directory.\n\n\n\nThe root is the starting point of your file system, usually represented by a drive letter like C:\\ or D:\\ in Windows.\n\n\nC:\\ (Root)\n│\n├── Users\\\n│   ├── yourName\\\n│   │   └── My_RStudio_Project\\\n│   │       ├── index.qmd\n│   │       └── data\\\n│   │           └── dataset.csv\n\nHere, the root is C:\\, and all files and folders are branches that stem from it.\n\n\n\n\nThe working directory is the folder you are currently working in. Think of it as your current location in the file tree.\nFor example:\n\nIf your working directory is C:\\Users\\yourName\\My_RStudio_Project\\, the files like index.qmd and the data\\ folder are directly accessible.\nYou don’t need to start from the root (C:\\) every time. Instead, you can use relative paths to refer to files.\n\n\n\nWorking Directory (WD): C:\\Users\\yourName\\My_RStudio_Project\\\n│\n├── index.qmd\n├── data\\\n│   └── dataset.csv\n└── images\\\n    └── plot.png\n\n\n\n\n\n\nAn absolute path starts from the root (e.g., C:\\) and gives the full location of a file.\nExample:\n\nTo access dataset.csv: C:\\Users\\yourName\\My_RStudio_Project\\data\\dataset.csv\nTo access plot.png: C:\\Users\\yourName\\My_RStudio_Project\\images\\plot.png\n\n\n\n\nA relative path starts from the working directory and is shorter because it doesn’t include the root.\nExample:\n\nIf your working directory is C:\\Users\\yourName\\My_RStudio_Project\\, to access dataset.csv in the data folder: ./data/dataset.csv\nTo access plot.png in the images folder: ./images/plot.png\n\n\n\n\n\nHere’s how to use these paths in an R script file:\n\nUsing Absolute Paths (Not Recommended): read.csv(\"C:/Users/yourName/My_RStudio_Project/data/dataset.csv\")\nUsing Relative Paths (Recommended): read.csv(\"./data/dataset.csv\")\n\nThe second option (relative paths) is better because it makes your project portable, meaning others can use it without needing to change the file paths.",
+    "crumbs": [
+      "Understanding Paths, Root, and Working Directory"
+    ]
+  },
+  {
+    "objectID": "content/paths.html#what-is-the-root",
+    "href": "content/paths.html#what-is-the-root",
+    "title": "Understanding Paths, Root, and Working Directory",
+    "section": "",
+    "text": "The root is the starting point of your file system, usually represented by a drive letter like C:\\ or D:\\ in Windows.\n\n\nC:\\ (Root)\n│\n├── Users\\\n│   ├── yourName\\\n│   │   └── My_RStudio_Project\\\n│   │       ├── index.qmd\n│   │       └── data\\\n│   │           └── dataset.csv\n\nHere, the root is C:\\, and all files and folders are branches that stem from it.",
+    "crumbs": [
+      "Understanding Paths, Root, and Working Directory"
+    ]
+  },
+  {
+    "objectID": "content/paths.html#what-is-the-working-directory-wd",
+    "href": "content/paths.html#what-is-the-working-directory-wd",
+    "title": "Understanding Paths, Root, and Working Directory",
+    "section": "",
+    "text": "The working directory is the folder you are currently working in. Think of it as your current location in the file tree.\nFor example:\n\nIf your working directory is C:\\Users\\yourName\\My_RStudio_Project\\, the files like index.qmd and the data\\ folder are directly accessible.\nYou don’t need to start from the root (C:\\) every time. Instead, you can use relative paths to refer to files.\n\n\n\nWorking Directory (WD): C:\\Users\\yourName\\My_RStudio_Project\\\n│\n├── index.qmd\n├── data\\\n│   └── dataset.csv\n└── images\\\n    └── plot.png",
+    "crumbs": [
+      "Understanding Paths, Root, and Working Directory"
+    ]
+  },
+  {
+    "objectID": "content/paths.html#paths-absolute-vs.-relative",
+    "href": "content/paths.html#paths-absolute-vs.-relative",
+    "title": "Understanding Paths, Root, and Working Directory",
+    "section": "",
+    "text": "An absolute path starts from the root (e.g., C:\\) and gives the full location of a file.\nExample:\n\nTo access dataset.csv: C:\\Users\\yourName\\My_RStudio_Project\\data\\dataset.csv\nTo access plot.png: C:\\Users\\yourName\\My_RStudio_Project\\images\\plot.png\n\n\n\n\nA relative path starts from the working directory and is shorter because it doesn’t include the root.\nExample:\n\nIf your working directory is C:\\Users\\yourName\\My_RStudio_Project\\, to access dataset.csv in the data folder: ./data/dataset.csv\nTo access plot.png in the images folder: ./images/plot.png",
+    "crumbs": [
+      "Understanding Paths, Root, and Working Directory"
+    ]
+  },
+  {
+    "objectID": "content/paths.html#example-in-r-project",
+    "href": "content/paths.html#example-in-r-project",
+    "title": "Understanding Paths, Root, and Working Directory",
+    "section": "",
+    "text": "Here’s how to use these paths in an R script file:\n\nUsing Absolute Paths (Not Recommended): read.csv(\"C:/Users/yourName/My_RStudio_Project/data/dataset.csv\")\nUsing Relative Paths (Recommended): read.csv(\"./data/dataset.csv\")\n\nThe second option (relative paths) is better because it makes your project portable, meaning others can use it without needing to change the file paths.",
+    "crumbs": [
+      "Understanding Paths, Root, and Working Directory"
+    ]
+  },
+  {
     "objectID": "content/initial.html",
     "href": "content/initial.html",
     "title": "Sign up on Posit Cloud",

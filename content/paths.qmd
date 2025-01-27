@@ -1,0 +1,89 @@
+---
+title: "Understanding Paths, Root, and Working Directory"
+
+---
+
+# Paths: The Basics
+
+When working on an **RStudio project**, you often need to tell RStudio where to find files like images, data, or other documents. This is done using **paths**. To understand paths, let’s define two important terms: **root** and **working directory**.
+
+---
+
+## What Is the Root?
+
+The **root** is the starting point of your file system, usually represented by a drive letter like `C:\` or `D:\` in Windows.
+
+### Example of a File Structure
+
+```plaintext
+C:\ (Root)
+│
+├── Users\
+│   ├── yourName\
+│   │   └── My_RStudio_Project\
+│   │       ├── index.qmd
+│   │       └── data\
+│   │           └── dataset.csv
+
+```
+
+Here, the root is  `C:\`, and all files and folders are branches that stem from it.
+
+## What Is the Working Directory (WD)?
+
+The **working directory** is the folder you are currently working in. Think of it as your current location in the file tree.
+
+**For example:**
+
+- If your working directory is `C:\Users\yourName\My_RStudio_Project\`, the files like `index.qmd` and the `data\` folder are directly accessible.
+
+- You don’t need to start from the root `(C:\)` every time. Instead, you can use _relative paths_ to refer to files.
+
+### Visual Example of WD
+
+```plaintext
+Working Directory (WD): C:\Users\yourName\My_RStudio_Project\
+│
+├── index.qmd
+├── data\
+│   └── dataset.csv
+└── images\
+    └── plot.png
+```
+
+## Paths: Absolute vs. Relative
+
+### Absolute Path
+
+An absolute path starts from the root (e.g., `C:\`) and gives the full location of a file.
+
+**Example:**
+
+- To access dataset.csv: `C:\Users\yourName\My_RStudio_Project\data\dataset.csv`
+
+- To access plot.png: `C:\Users\yourName\My_RStudio_Project\images\plot.png`
+
+
+
+### Relative Path
+
+A relative path starts from the working directory and is shorter because it doesn’t include the root.
+
+**Example:**
+
+- If your working directory is `C:\Users\yourName\My_RStudio_Project\`, to access `dataset.csv` in the data folder: `./data/dataset.csv`
+
+
+- To access plot.png in the images folder: `./images/plot.png`
+
+## Example in R project
+
+Here’s how to use these paths in an R script file:
+
+-  Using Absolute Paths (Not Recommended): `read.csv("C:/Users/yourName/My_RStudio_Project/data/dataset.csv")`
+
+- Using Relative Paths (Recommended): `read.csv("./data/dataset.csv")`
+
+The second option (relative paths) is better because it makes your project portable, meaning others can use it without needing to change the file paths.
+
+
