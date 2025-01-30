@@ -40,3 +40,5 @@ At the heart of the Tidyverse lies ggplot2, the ultimate tool for creating stunn
 Heads up! For ultra-customized visuals, you might need a bit of extra coding or help from external tools. 
 
 But for most tasks, ggplot2 is a powerhouse! 💪
+
+[Here](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) you can also find the ggplot cheat sheet file. 

@@ -7,4 +7,3 @@ The **R Graph Gallery** is your go-to resource for stunning data visualizations 
 
 Explore the [gallery](https://r-graph-gallery.com) and elevate your data storytelling.
 
-[Here](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) you can also find the ggplot cheat sheet file. 
