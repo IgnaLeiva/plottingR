@@ -90,6 +90,26 @@
     ]
   },
   {
+    "objectID": "content/ggplotgallery.html",
+    "href": "content/ggplotgallery.html",
+    "title": "Discover The R Graph Gallery",
+    "section": "",
+    "text": "The R Graph Gallery is your go-to resource for stunning data visualizations created with R. From basic plots to complex, interactive graphics, it offers a vast collection of examples accompanied by reproducible R code. Perfect for learning and inspiration, the gallery helps turn your data into clear, compelling visuals.\nExplore the gallery and elevate your data storytelling.\nHere you can also find the ggplot cheat sheet file.",
+    "crumbs": [
+      "The R Graph Gallery"
+    ]
+  },
+  {
+    "objectID": "content/initial.html",
+    "href": "content/initial.html",
+    "title": "Sign up on Posit Cloud",
+    "section": "",
+    "text": "Here’s everything you need to succeed: Guides for the r-cubed courses\nA big thank you to the instructors for their guidance! 👏\nAfter you have created an account and a workspace, create a project and name it my_first_project. To do this, follow the An Introduction to R tutorial. The last suggestion is not necessary.",
+    "crumbs": [
+      "Sign up on Posit Cloud"
+    ]
+  },
+  {
     "objectID": "content/paths.html",
     "href": "content/paths.html",
     "title": "Understanding Paths, Root, and Working Directory",
@@ -140,23 +160,13 @@
     ]
   },
   {
-    "objectID": "content/initial.html",
-    "href": "content/initial.html",
-    "title": "Sign up on Posit Cloud",
+    "objectID": "content/color_matters.html",
+    "href": "content/color_matters.html",
+    "title": "Color Matters",
     "section": "",
-    "text": "Here’s everything you need to succeed: Guides for the r-cubed courses\nA big thank you to the instructors for their guidance! 👏\nAfter you have created an account and a workspace, create a project and name it my_first_project. To do this, follow the An Introduction to R tutorial. The last suggestion is not necessary.",
+    "text": "Colour is crucial in plotting as it helps to interpret data, highlight key findings and improve readability. For those who are colour blind, poor colour choices can make plots confusing or inaccessible. Using colour-blind friendly palettes (e.g. viridis, colorbrewer) ensures clarity and inclusivity, allowing everyone to interpret the data accurately.\nHere you can find a nice source to help you make a good decision",
     "crumbs": [
-      "Sign up on Posit Cloud"
-    ]
-  },
-  {
-    "objectID": "content/ggplotgallery.html",
-    "href": "content/ggplotgallery.html",
-    "title": "Discover The R Graph Gallery",
-    "section": "",
-    "text": "The R Graph Gallery is your go-to resource for stunning data visualizations created with R. From basic plots to complex, interactive graphics, it offers a vast collection of examples accompanied by reproducible R code. Perfect for learning and inspiration, the gallery helps turn your data into clear, compelling visuals.\nExplore the gallery and elevate your data storytelling.",
-    "crumbs": [
-      "The R Graph Gallery"
+      "Color matters"
     ]
   },
   {

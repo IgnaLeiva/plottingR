@@ -1,0 +1,8 @@
+---
+title: Color Matters
+---
+
+Colour is crucial in plotting as it helps to interpret data, highlight key findings and improve readability. For those who are colour blind, poor colour choices can make plots confusing or inaccessible. Using colour-blind friendly palettes (e.g. viridis, colorbrewer) ensures clarity and inclusivity, allowing everyone to interpret the data accurately.
+
+
+[Here](https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40) you can find a nice source to help you make a good decision

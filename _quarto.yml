@@ -45,6 +45,8 @@ website:
         text: Write your code
       - href: content/ggplotgallery.qmd
         text: The R Graph Gallery
+      - href: content/color_matters.qmd
+        text: Color matters
       - href: content/paths.qmd
         text: Understanding Paths, Root, and Working Directory
       - href: content/data.qmd
