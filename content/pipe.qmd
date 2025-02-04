@@ -8,8 +8,13 @@ Originally introduced in the `{magrittr}` package and widely used in `{dplyr}`, 
 Why Use the Pipe?
 
 ✅ Improves readability – No more nested functions!
+
+
 ✅ Reduces intermediate variables – Keeps code concise.
+
+
 ✅ Enhances workflow – Makes step-by-step transformations intuitive.
+
 
 [Here](https://faculty.washington.edu/otoomet/machinelearning-R/pipes-dplyr.html) you can find a nice and easy to follow example of how and why to use it.
 

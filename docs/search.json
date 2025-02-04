@@ -197,7 +197,7 @@
     "href": "content/pipe.html",
     "title": "The Pipe Operator",
     "section": "",
-    "text": "The pipe operator %&gt;% is a powerful tool in R that allows for clean, readable, and efficient code. Originally introduced in the {magrittr} package and widely used in {dplyr}, it helps streamline operations by passing the output of one function directly into the next.\nWhy Use the Pipe?\n✅ Improves readability – No more nested functions! ✅ Reduces intermediate variables – Keeps code concise. ✅ Enhances workflow – Makes step-by-step transformations intuitive.\nHere you can find a nice and easy to follow example of how and why to use it.\nNote:\nThere are two types of pipe. Most of the time you can use them interchangeably,, the {base} pipe |&gt; and the {magrittr} %&gt;%, here their differences",
+    "text": "The pipe operator %&gt;% is a powerful tool in R that allows for clean, readable, and efficient code. Originally introduced in the {magrittr} package and widely used in {dplyr}, it helps streamline operations by passing the output of one function directly into the next.\nWhy Use the Pipe?\n✅ Improves readability – No more nested functions!\n✅ Reduces intermediate variables – Keeps code concise.\n✅ Enhances workflow – Makes step-by-step transformations intuitive.\nHere you can find a nice and easy to follow example of how and why to use it.\nNote:\nThere are two types of pipe. Most of the time you can use them interchangeably,, the {base} pipe |&gt; and the {magrittr} %&gt;%, here their differences",
     "crumbs": [
       "Tidyverse Package",
       "The Pipe Operator"
