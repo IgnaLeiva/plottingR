@@ -1,0 +1,21 @@
+---
+title: dplyr() 🔢
+---
+
+**dplyr** is a powerful tool for data manipulation in **R**
+
+dplyr is one of the core packages in the tidyverse, designed for fast and efficient data manipulation in R. It provides a set of intuitive functions that make it easy to filter, arrange, summarize, and transform data using a consistent and readable syntax.
+
+Key Features of dplyr:
+
+-   🔍 Filter rows with filter() based on conditions
+-   📌 Select columns using select()
+-   🔄 Rearrange rows with arrange()
+-   🧮 Create new columns with mutate()
+-   📊 Summarize data using summarize()
+-   🔗 Join multiple datasets with functions like left_join()
+
+dplyr is optimized for performance and works seamlessly with data frames and tibbles, making it a must-have tool for data analysis in R. 
+
+[Here](https://rstudio.github.io/cheatsheets/data-transformation.pdf) you can also find the dplyr cheat sheet file. 
+

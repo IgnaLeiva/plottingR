@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sign up on Posit Cloud – PhEpiGit</title>
+<title>dplyr() 🔢 – PhEpiGit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/R.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../content/pipe.html" rel="next">
+<link href="../content/ggplot.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/initial.html">Sign up on Posit Cloud</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/tidyverse.html">Tidyverse Package</a></li><li class="breadcrumb-item"><a href="../content/dplyr.html">dplyr</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/initial.html" class="sidebar-item-text sidebar-link active">
+  <a href="../content/initial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sign up on Posit Cloud</span></a>
   </div>
 </li>
@@ -136,13 +136,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Tidyverse Package</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/tidyverse.html" class="sidebar-item-text sidebar-link">
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/dplyr.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/dplyr.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">dplyr</span></a>
   </div>
 </li>
@@ -210,9 +210,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/tidyverse.html">Tidyverse Package</a></li><li class="breadcrumb-item"><a href="../content/dplyr.html">dplyr</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Sign up on Posit Cloud</h1>
+<h1 class="title">dplyr() 🔢</h1>
 </div>
 
 
@@ -229,9 +229,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Here’s everything you need to succeed: <a href="https://guides.rostools.org/posit-cloud">Guides for the r-cubed courses</a></p>
-<p>A big thank you to the instructors for their guidance! 👏</p>
-<p>After you have created an account and a <code>workspace</code>, create a project and name it <code>my_first_project</code>. To do this, follow the <strong>An Introduction to R</strong> <a href="https://intro2r.com/rsprojs.html">tutorial</a>. The last suggestion is not necessary.</p>
+<p><strong>dplyr</strong> is a powerful tool for data manipulation in <strong>R</strong></p>
+<p>dplyr is one of the core packages in the tidyverse, designed for fast and efficient data manipulation in R. It provides a set of intuitive functions that make it easy to filter, arrange, summarize, and transform data using a consistent and readable syntax.</p>
+<p>Key Features of dplyr:</p>
+<ul>
+<li>🔍 Filter rows with filter() based on conditions</li>
+<li>📌 Select columns using select()</li>
+<li>🔄 Rearrange rows with arrange()</li>
+<li>🧮 Create new columns with mutate()</li>
+<li>📊 Summarize data using summarize()</li>
+<li>🔗 Join multiple datasets with functions like left_join()</li>
+</ul>
+<p>dplyr is optimized for performance and works seamlessly with data frames and tibbles, making it a must-have tool for data analysis in R.</p>
+<p><a href="https://rstudio.github.io/cheatsheets/data-transformation.pdf">Here</a> you can also find the dplyr cheat sheet file.</p>
 
 
 
@@ -799,13 +809,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Home">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
+      <a href="../content/ggplot.html" class="pagination-link" aria-label="ggplot">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ggplot</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/R.html" class="pagination-link" aria-label="R &amp; RStudio">
-        <span class="nav-page-text">R &amp; RStudio</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/pipe.html" class="pagination-link" aria-label="The Pipe Operator">
+        <span class="nav-page-text">The Pipe Operator</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

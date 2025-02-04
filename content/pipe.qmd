@@ -1,0 +1,19 @@
+---
+title: The Pipe Operator
+---
+
+The pipe operator `%>%` is a powerful tool in R that allows for clean, readable, and efficient code. 
+Originally introduced in the `{magrittr}` package and widely used in `{dplyr}`, it helps streamline operations by passing the output of one function directly into the next.
+
+Why Use the Pipe?
+
+✅ Improves readability – No more nested functions!
+✅ Reduces intermediate variables – Keeps code concise.
+✅ Enhances workflow – Makes step-by-step transformations intuitive.
+
+[Here](https://faculty.washington.edu/otoomet/machinelearning-R/pipes-dplyr.html) you can find a nice and easy to follow example of how and why to use it.
+
+**Note**:
+
+There are two types of pipe. Most of the time you can use them interchangeably,, the `{base}` pipe
+`|>` and the `{magrittr}` `%>%`, [here](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/) their differences

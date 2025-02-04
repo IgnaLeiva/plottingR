@@ -46,7 +46,7 @@
     "section": "",
     "text": "Writing clean and consistent code is essential for readability, reproducibility, and collaboration. Following a standardized syntax, like the Tidyverse style guide, ensures your code is easy to understand and maintain, whether you’re working alone or with a team.\nThe Tidyverse style guide provides clear guidelines for writing efficient, organized R code, which ultimately leads to better programming practices. For more details on this approach, check out the Tidyverse Style Guide. Thanks to the Tidyverse team for making coding in R more accessible and enjoyable!",
     "crumbs": [
-      "Write your code"
+      "Write Your Code"
     ]
   },
   {
@@ -97,6 +97,39 @@
     "text": "The R Graph Gallery is your go-to resource for stunning data visualizations created with R. From basic plots to complex, interactive graphics, it offers a vast collection of examples accompanied by reproducible R code. Perfect for learning and inspiration, the gallery helps turn your data into clear, compelling visuals.\nExplore the gallery and elevate your data storytelling.",
     "crumbs": [
       "The R Graph Gallery"
+    ]
+  },
+  {
+    "objectID": "content/dplyr.html",
+    "href": "content/dplyr.html",
+    "title": "dplyr() 🔢",
+    "section": "",
+    "text": "dplyr is a powerful tool for data manipulation in R\ndplyr is one of the core packages in the tidyverse, designed for fast and efficient data manipulation in R. It provides a set of intuitive functions that make it easy to filter, arrange, summarize, and transform data using a consistent and readable syntax.\nKey Features of dplyr:\n\n🔍 Filter rows with filter() based on conditions\n📌 Select columns using select()\n🔄 Rearrange rows with arrange()\n🧮 Create new columns with mutate()\n📊 Summarize data using summarize()\n🔗 Join multiple datasets with functions like left_join()\n\ndplyr is optimized for performance and works seamlessly with data frames and tibbles, making it a must-have tool for data analysis in R.\nHere you can also find the dplyr cheat sheet file.",
+    "crumbs": [
+      "Tidyverse Package",
+      "dplyr"
+    ]
+  },
+  {
+    "objectID": "content/ggplot.html",
+    "href": "content/ggplot.html",
+    "title": "ggplot2() 📊",
+    "section": "",
+    "text": "At the heart of the Tidyverse lies ggplot2, the ultimate tool for creating stunning visualizations:\n\nGrammar of Graphics: Build plots layer by layer for maximum control and creativity.\nVersatility: From scatterplots to histograms to pie charts, ggplot2 does it all.\nEasy to Customize: Quickly add titles, labels, and themes without breaking a sweat.\nAutomation: Handles the nitty-gritty so you can focus on insights, not formatting.\n\nHeads up! For ultra-customized visuals, you might need a bit of extra coding or help from external tools.\nBut for most tasks, ggplot2 is a powerhouse! 💪\nHere you can also find the ggplot cheat sheet file.",
+    "crumbs": [
+      "Tidyverse Package",
+      "ggplot"
+    ]
+  },
+  {
+    "objectID": "content/ggplot.html#ggplot2-your-data-visualisations-best-friend",
+    "href": "content/ggplot.html#ggplot2-your-data-visualisations-best-friend",
+    "title": "ggplot2() 📊",
+    "section": "",
+    "text": "At the heart of the Tidyverse lies ggplot2, the ultimate tool for creating stunning visualizations:\n\nGrammar of Graphics: Build plots layer by layer for maximum control and creativity.\nVersatility: From scatterplots to histograms to pie charts, ggplot2 does it all.\nEasy to Customize: Quickly add titles, labels, and themes without breaking a sweat.\nAutomation: Handles the nitty-gritty so you can focus on insights, not formatting.\n\nHeads up! For ultra-customized visuals, you might need a bit of extra coding or help from external tools.\nBut for most tasks, ggplot2 is a powerhouse! 💪\nHere you can also find the ggplot cheat sheet file.",
+    "crumbs": [
+      "Tidyverse Package",
+      "ggplot"
     ]
   },
   {
@@ -160,13 +193,24 @@
     ]
   },
   {
+    "objectID": "content/pipe.html",
+    "href": "content/pipe.html",
+    "title": "The Pipe Operator",
+    "section": "",
+    "text": "The pipe operator %&gt;% is a powerful tool in R that allows for clean, readable, and efficient code. Originally introduced in the {magrittr} package and widely used in {dplyr}, it helps streamline operations by passing the output of one function directly into the next.\nWhy Use the Pipe?\n✅ Improves readability – No more nested functions! ✅ Reduces intermediate variables – Keeps code concise. ✅ Enhances workflow – Makes step-by-step transformations intuitive.\nHere you can find a nice and easy to follow example of how and why to use it.\nNote:\nThere are two types of pipe. Most of the time you can use them interchangeably,, the {base} pipe |&gt; and the {magrittr} %&gt;%, here their differences",
+    "crumbs": [
+      "Tidyverse Package",
+      "The Pipe Operator"
+    ]
+  },
+  {
     "objectID": "content/color_matters.html",
     "href": "content/color_matters.html",
     "title": "Color Matters",
     "section": "",
     "text": "Colour is crucial in plotting as it helps to interpret data, highlight key findings and improve readability. For those who are colour blind, poor colour choices can make plots confusing or inaccessible. Using colour-blind friendly palettes (e.g. viridis, colorbrewer) ensures clarity and inclusivity, allowing everyone to interpret the data accurately.\nHere you can find a nice source to help you make a good decision",
     "crumbs": [
-      "Color matters"
+      "Color Matters"
     ]
   },
   {
@@ -176,7 +220,8 @@
     "section": "",
     "text": "The Tidyverse is a collection of R packages that makes data science smoother, faster, and more fun!\nHere’s why it’s awesome:\n\nConsistency: Everything speaks the same “grammar,” making it easy to learn.\nIntegration: The packages are designed to play nicely together.\nProductivity Boost: It simplifies your workflow from data wrangling to eye-catching visuals.\n\nThe packages included are:\n\n\n\n\n\n\n\n\nCategory\nPackage(s)\nDescription\n\n\n\n\nData Wrangling\ndplyr\nFor filtering, summarizing, and transforming your data.\n\n\n\ntidyr\nHelps reshape and tidy your datasets.\n\n\nData Import\nreadr\nLoads data quickly from CSV, TSV, and other text formats.\n\n\n\nreadxl, googlesheets4\nFor reading Excel and Google Sheets files.\n\n\nData Visualization\nggplot2\nThe star of the show for creating beautiful and customizable plots.\n\n\nString Handling\nstringr\nSimplifies working with text and string data.\n\n\nDate and Time\nlubridate\nMakes date and time manipulation easy.\n\n\nProgramming Tools\npurrr\nAdds functional programming capabilities to make your code cleaner.",
     "crumbs": [
-      "Tidyverse packege"
+      "Tidyverse Package",
+      "Tidyverse"
     ]
   },
   {
@@ -186,17 +231,8 @@
     "section": "",
     "text": "The Tidyverse is a collection of R packages that makes data science smoother, faster, and more fun!\nHere’s why it’s awesome:\n\nConsistency: Everything speaks the same “grammar,” making it easy to learn.\nIntegration: The packages are designed to play nicely together.\nProductivity Boost: It simplifies your workflow from data wrangling to eye-catching visuals.\n\nThe packages included are:\n\n\n\n\n\n\n\n\nCategory\nPackage(s)\nDescription\n\n\n\n\nData Wrangling\ndplyr\nFor filtering, summarizing, and transforming your data.\n\n\n\ntidyr\nHelps reshape and tidy your datasets.\n\n\nData Import\nreadr\nLoads data quickly from CSV, TSV, and other text formats.\n\n\n\nreadxl, googlesheets4\nFor reading Excel and Google Sheets files.\n\n\nData Visualization\nggplot2\nThe star of the show for creating beautiful and customizable plots.\n\n\nString Handling\nstringr\nSimplifies working with text and string data.\n\n\nDate and Time\nlubridate\nMakes date and time manipulation easy.\n\n\nProgramming Tools\npurrr\nAdds functional programming capabilities to make your code cleaner.",
     "crumbs": [
-      "Tidyverse packege"
-    ]
-  },
-  {
-    "objectID": "content/tidyverse.html#ggplot2-your-data-visualisations-best-friend",
-    "href": "content/tidyverse.html#ggplot2-your-data-visualisations-best-friend",
-    "title": "Your Data Science Superpower 🧙",
-    "section": "🎨 ggplot2: Your data visualisation’s best friend",
-    "text": "🎨 ggplot2: Your data visualisation’s best friend\nAt the heart of the Tidyverse lies ggplot2, the ultimate tool for creating stunning visualizations:\n\nGrammar of Graphics: Build plots layer by layer for maximum control and creativity.\nVersatility: From scatterplots to histograms to pie charts, ggplot2 does it all.\nEasy to Customize: Quickly add titles, labels, and themes without breaking a sweat.\nAutomation: Handles the nitty-gritty so you can focus on insights, not formatting.\n\nHeads up! For ultra-customized visuals, you might need a bit of extra coding or help from external tools.\nBut for most tasks, ggplot2 is a powerhouse! 💪\nHere you can also find the ggplot cheat sheet file.",
-    "crumbs": [
-      "Tidyverse packege"
+      "Tidyverse Package",
+      "Tidyverse"
     ]
   },
   {
@@ -206,7 +242,7 @@
     "section": "",
     "text": "Student Mental health. Download\nDiabetes Health Indicators. Download",
     "crumbs": [
-      "Data sets"
+      "Data Sets"
     ]
   },
   {
@@ -216,7 +252,7 @@
     "section": "",
     "text": "Student Mental health. Download\nDiabetes Health Indicators. Download",
     "crumbs": [
-      "Data sets"
+      "Data Sets"
     ]
   }
 ]

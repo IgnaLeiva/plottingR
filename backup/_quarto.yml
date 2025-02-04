@@ -33,32 +33,24 @@ website:
     search: true
     collapse-level: 1
     contents:
-        - href: index.qmd
-          text: Home
-        - href: content/initial.qmd
-          text: Sign up on Posit Cloud
-        - href: content/R.qmd
-          text: R & RStudio
-        - section: "Tidyverse Package"
-          contents:
-            - href: content/tidyverse.qmd
-              text: Tidyverse
-            - href: content/ggplot.qmd
-              text: ggplot
-            - href: content/dplyr.qmd
-              text: dplyr 
-            - href: content/pipe.qmd
-              text: The Pipe Operator
-        - href: content/writingCode.qmd
-          text: Write Your Code
-        - href: content/ggplotgallery.qmd
-          text: The R Graph Gallery
-        - href: content/color_matters.qmd
-          text: Color Matters
-        - href: content/paths.qmd
-          text: Understanding Paths, Root, and Working Directory
-        - href: content/data.qmd
-          text: Data Sets
+      - href: index.qmd
+        text: Home
+      - href: content/initial.qmd
+        text: Sign up on Posit Cloud
+      - href: content/R.qmd
+        text: R & RStudio
+      - href: content/tidyverse.qmd
+        text: Tidyverse package
+      - href: content/writingCode.qmd
+        text: Write your code
+      - href: content/ggplotgallery.qmd
+        text: The R Graph Gallery
+      - href: content/color_matters.qmd
+        text: Color matters
+      - href: content/paths.qmd
+        text: Understanding Paths, Root, and Working Directory
+      - href: content/data.qmd
+        text: Data sets
 
    
 
