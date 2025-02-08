@@ -4,11 +4,19 @@ project:
 
 website: 
   page-navigation: true
-  title: "PhEpiGit" 
+  title: "Plotting with R" 
   site-url: "https://www.klinikum.uni-heidelberg.de/en/kliniken-institute/kliniken/zentrum-fuer-innere-medizin-krehl-klinik/dept-of-clinical-pharmacology-and-pharmacoepidemiology" 
   repo-url: "https://pharmacoepidemiology-ukhd.github.io/SOPGitHub"
   #repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
+  navbar:
+    background: "#26619c"
+    left:
+      - href: index.qmd
+        text: Home
+    right:
+      - icon: github
+        href: https://github.com/IgnaLeiva/plottingR
   
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
@@ -21,13 +29,13 @@ website:
     logo: ReproducibiliTeaLogo.png
     pinned: true
     align: center
-    tools: 
-      - icon: globe
-        href: https://www.klinikum.uni-heidelberg.de/en/kliniken-institute/kliniken/zentrum-fuer-innere-medizin-krehl-klinik/dept-of-clinical-pharmacology-and-pharmacoepidemiology
-        text: "UKHD"
-      - icon: github
-        href: https://github.com/Pharmacoepidemiology-UKHD
-        text: "PhEpi"
+    #tools: 
+    #  - icon: globe
+    #    href: https://www.klinikum.uni-heidelberg.de/en/kliniken-institute/kliniken/zentrum-fuer-innere-medizin-krehl-klinik/dept-of-clinical-pharmacology-and-pharmacoepidemiology
+    #    text: "UKHD"
+    #  - icon: github
+     #   href: https://github.com/Pharmacoepidemiology-UKHD
+     #   text: "PhEpi"
 
     style: "docked"
     search: true
@@ -73,7 +81,7 @@ format:
 
 
 filters:
-  - include-files.lua
   - quarto
+# - include-files.lua
 
   
