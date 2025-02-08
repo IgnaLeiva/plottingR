@@ -29,18 +29,3 @@ code {
     color: #26619c !important;
   }
 
-/* Style external links */
-a[href^="http"]:not([href="https://github.com/IgnaLeiva/plottingR"]) {
-    color: #636161 !important;  /* Text color */
-    background-color: #F5F5F5;   /* Background color */
-    padding: 2px 5px 2px 5px;         /* Add some padding top , right, bottom, left*/
-    border-radius: 5px;       /* Optional: rounded corners */
-    text-decoration: none;    /* Remove underline */
-  }
-  
-  /* Hover effect */
-  a[href^="http"]:not([href="https://github.com/IgnaLeiva/plottingR"]):hover {
-    background-color: #26619c;    /* Change background on hover */
-    color: white !important;  /* Keep text white */
-    text-decoration: underline; /* Add underline */
-  }
