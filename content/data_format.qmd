@@ -1,0 +1,191 @@
+---
+title: Student Mental health
+---
+
+## Check your data
+```{r}
+#| message: false
+# Library
+library(tidyverse)
+
+```
+
+```{r}
+# Read dataset
+data <- read.csv("../data/Student_Mental_health.csv")
+```
+
+:::  {.callout-note  icon=false collapse="true"}
+
+## See first records
+```{r}
+#| code-fold: true
+
+head(data)
+
+dim(data)
+```
+
+:::
+
+```{r}
+# See data class
+glimpse(data)
+```
+
+:::  {.callout-note  icon=false collapse="true"}
+
+## Name of your variables
+```{r}
+# See data class
+names(data)
+```
+
+:::
+
+## Transform your data
+
+### A basinc approach 
+
+:::  {.callout-tip  icon=true collapse="true"}
+
+- `logical (e.g., TRUE, FALSE)`
+- `integer (e.g,, 2L, as.integer(3))`
+- `numeric (real or decimal) (e.g, 2, 2.0, pi)`
+- `factor (e.g., "yes", "no" or "low", "medium", "high")`
+- `complex (e.g, 1 + 0i, 1 + 4i)`
+- `character (e.g, "a", "swc")`
+
+:::
+
+We can change the class of the variable one by one using `factor()` function.
+```{r}
+
+new_data <- data %>%
+              mutate(
+                Choose.your.gender         = factor(Choose.your.gender),
+                What.is.your.course.       = factor(What.is.your.course.),
+                Your.current.year.of.Study = factor(Your.current.year.of.Study),
+                What.is.your.CGPA.         = factor(What.is.your.CGPA.),
+                Marital.status             = factor(Marital.status),
+                Do.you.have.Depression.    = factor(Do.you.have.Depression.),
+                Do.you.have.Anxiety.       = factor(Do.you.have.Anxiety.),
+                Do.you.have.Panic.attack.  = factor(Do.you.have.Panic.attack.),
+                Did.you.seek.any.specialist.for.a.treatment. = factor(Did.you.seek.any.specialist.for.a.treatment.)
+                )
+```
+
+Additionally you can use `mutate_if()` to change all _characeter_ variables to _factor_ variable.
+
+```{r}
+#| code-fold: true
+
+new_data <- data %>%
+              mutate_if(is.character, as.factor)
+```
+
+Now check the variable class using `glimpse()`
+```{r}
+glimpse(new_data)
+summary(new_data)
+```
+
+If you want to check the class of the variable, you can use the `class()` and `levels()` function to check the levels of the variable.
+```{r}
+class(new_data$Marital.status)
+levels(new_data$Marital.status)
+```
+
+
+### A more drastic change
+
+If you need to work with factor/categoric using a different names or levels, and additionally you want to change the name of your variables, you could do this. (Remember that in R there are several ways to achieve the same result).
+
+:::  {.callout-tip  icon=true collapse="true"}
+## Logical functions
+
+- `ifelse()` works best when defining two levels. It takes three arguments: (1) a condition (e.g., AGE == 10), which evaluates to TRUE or FALSE, (2) the value returned if the condition is TRUE, and (3) the value returned if the condition is FALSE. `ifelse(AGE == 10, "Child", "Adult")`
+
+- `case_when()` is useful when you need to categorize data into more than two levels. Unlike `ifelse()`, which only handles two outcomes, `case_when()` allows multiple conditions, each assigned a specific value.
+
+```
+case_when(
+    AGE < 13 ~ "Child",
+    AGE >= 13 & AGE < 18 ~ "Teen",
+    AGE >= 18 & AGE < 65 ~ "Adult",
+    AGE >= 65 ~ "Senior",
+    TRUE ~ "Unknown"  # Default case (optional)
+  )
+```
+
+:::
+
+```{r}
+
+# 1st: re-defined levels
+
+new_data <- data %>%
+              mutate(
+                Age_group                        = case_when(
+                                                between(Age, 18, 20) ~ "18-20",
+                                                between(Age, 21, 22) ~ "21-22",
+                                                between(Age, 23, 24) ~ "23-24",
+                                                TRUE ~ "Other"),
+                Choose.your.gender         = ifelse(Choose.your.gender == "Female", "F", "M"),
+                What.is.your.course.       = ifelse(What.is.your.course. == "BCS" | What.is.your.course. == "BIT", "Courses A", "Courses B"),
+                Your.current.year.of.Study = factor(Your.current.year.of.Study),
+                What.is.your.CGPA.         = factor(What.is.your.CGPA.),
+                Marital.status             = factor(Marital.status),
+                Do.you.have.Depression.    = factor(Do.you.have.Depression.),
+                Do.you.have.Anxiety.       = factor(Do.you.have.Anxiety.),
+                Do.you.have.Panic.attack.  = factor(Do.you.have.Panic.attack.),
+                Did.you.seek.any.specialist.for.a.treatment. = factor(Did.you.seek.any.specialist.for.a.treatment.)
+                   ) %>%
+              # Now we need to transform the character to factor
+              mutate(Age_group = factor(Age_group, levels = c("18-20", "21-22", "23-24")),
+                     Choose.your.gender = factor(Choose.your.gender),
+                     What.is.your.course. = factor(What.is.your.course., levels = c("Courses A", "Courses B"))
+                    )  %>%
+              rename(
+                gender = Choose.your.gender,
+                course= What.is.your.course.,
+                year_study = Your.current.year.of.Study,
+                CGPA = What.is.your.CGPA.
+                ) %>%
+             select(Age, Age_group, everything())
+
+```
+
+## Table 1
+
+There are several packages available for creating tables. Here I present the `{gtsummary}
+
+```{r}
+library(gtsummary)
+
+new_data %>%
+    select(-c(Timestamp)) %>%
+    tbl_summary(
+        by = "Do.you.have.Depression.",
+        type = list(
+                  all_dichotomous() ~ "categorical",
+                  Age ~ "continuous2"),
+        label = list(
+                  Age_group ~ "Age groups",
+                  gender ~ "Gender",
+                  course ~ "Course",
+                  year_study ~"Year of study",
+                  Marital.status ~ "Marital status",
+                  Do.you.have.Anxiety. ~ "Anxiety symptoms",
+                  Do.you.have.Panic.attack. ~"Have experienced panic attacks",
+                  Did.you.seek.any.specialist.for.a.treatment.~"Have sought any specialist for a treatment.	"),
+        missing_text = "(Missing)",
+        statistic = list(
+            all_continuous() ~ c("{mean} ({sd})", "{median} ({p25}, {p75})", "{min}, {max}")
+        )) %>%
+    modify_spanning_header(all_stat_cols() ~ "**Had suffered from depression**") %>%
+    add_p(
+    # perform t-test for all variables
+    test = list(all_continuous() ~ "t.test", all_categorical() ~ "fisher.test"))
+
+```
