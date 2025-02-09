@@ -163,6 +163,7 @@ There are several packages available for creating tables. Here I present the `{g
 ```{r}
 library(gtsummary)
 
+tbl <- 
 new_data %>%
     select(-c(Timestamp)) %>%
     tbl_summary(
@@ -188,4 +189,21 @@ new_data %>%
     # perform t-test for all variables
     test = list(all_continuous() ~ "t.test", all_categorical() ~ "fisher.test"))
 
+tbl
 ```
+
+The table can be exporeted as `docx` for that a bit of additional coding.
+
+```{r}
+#| eval: false
+library(gt)
+
+tbl_gt <- tbl %>%
+           as_gt()
+
+gt::gtsave(tbl_gt, "../data/tbl_mental_health.docx")
+```
+
+[Here](/data/tbl_mental_health.docx) is the table.
+
+

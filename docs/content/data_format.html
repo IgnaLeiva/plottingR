@@ -609,48 +609,51 @@ Logical functions
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>new_data <span class="sc">%&gt;%</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(Timestamp)) <span class="sc">%&gt;%</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tbl_summary</span>(</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="st">"Do.you.have.Depression."</span>,</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="fu">list</span>(</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">all_dichotomous</span>() <span class="sc">~</span> <span class="st">"categorical"</span>,</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>                  Age <span class="sc">~</span> <span class="st">"continuous2"</span>),</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>                  Age_group <span class="sc">~</span> <span class="st">"Age groups"</span>,</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>                  gender <span class="sc">~</span> <span class="st">"Gender"</span>,</span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>                  course <span class="sc">~</span> <span class="st">"Course"</span>,</span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>                  year_study <span class="sc">~</span><span class="st">"Year of study"</span>,</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>                  Marital.status <span class="sc">~</span> <span class="st">"Marital status"</span>,</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>                  Do.you.have.Anxiety. <span class="sc">~</span> <span class="st">"Anxiety symptoms"</span>,</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>                  Do.you.have.Panic.attack. <span class="sc">~</span><span class="st">"Have experienced panic attacks"</span>,</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>                  Did.you.seek.any.specialist.for.a.treatment.<span class="sc">~</span><span class="st">"Have sought any specialist for a treatment. "</span>),</span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">missing_text =</span> <span class="st">"(Missing)"</span>,</span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">statistic =</span> <span class="fu">list</span>(</span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>            <span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="fu">c</span>(<span class="st">"{mean} ({sd})"</span>, <span class="st">"{median} ({p25}, {p75})"</span>, <span class="st">"{min}, {max}"</span>)</span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>        )) <span class="sc">%&gt;%</span></span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">modify_spanning_header</span>(<span class="fu">all_stat_cols</span>() <span class="sc">~</span> <span class="st">"**Had suffered from depression**"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_p</span>(</span>
-<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># perform t-test for all variables</span></span>
-<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">test =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">"t.test"</span>, <span class="fu">all_categorical</span>() <span class="sc">~</span> <span class="st">"fisher.test"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>tbl <span class="ot">&lt;-</span> </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>new_data <span class="sc">%&gt;%</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(Timestamp)) <span class="sc">%&gt;%</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tbl_summary</span>(</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="st">"Do.you.have.Depression."</span>,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="fu">list</span>(</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">all_dichotomous</span>() <span class="sc">~</span> <span class="st">"categorical"</span>,</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>                  Age <span class="sc">~</span> <span class="st">"continuous2"</span>),</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>                  Age_group <span class="sc">~</span> <span class="st">"Age groups"</span>,</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>                  gender <span class="sc">~</span> <span class="st">"Gender"</span>,</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>                  course <span class="sc">~</span> <span class="st">"Course"</span>,</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>                  year_study <span class="sc">~</span><span class="st">"Year of study"</span>,</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>                  Marital.status <span class="sc">~</span> <span class="st">"Marital status"</span>,</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>                  Do.you.have.Anxiety. <span class="sc">~</span> <span class="st">"Anxiety symptoms"</span>,</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>                  Do.you.have.Panic.attack. <span class="sc">~</span><span class="st">"Have experienced panic attacks"</span>,</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>                  Did.you.seek.any.specialist.for.a.treatment.<span class="sc">~</span><span class="st">"Have sought any specialist for a treatment. "</span>),</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">missing_text =</span> <span class="st">"(Missing)"</span>,</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">statistic =</span> <span class="fu">list</span>(</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>            <span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="fu">c</span>(<span class="st">"{mean} ({sd})"</span>, <span class="st">"{median} ({p25}, {p75})"</span>, <span class="st">"{min}, {max}"</span>)</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>        )) <span class="sc">%&gt;%</span></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">modify_spanning_header</span>(<span class="fu">all_stat_cols</span>() <span class="sc">~</span> <span class="st">"**Had suffered from depression**"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_p</span>(</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># perform t-test for all variables</span></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">test =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">"t.test"</span>, <span class="fu">all_categorical</span>() <span class="sc">~</span> <span class="st">"fisher.test"</span>))</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>tbl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="zvxhdewlka" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zvxhdewlka table {
+<div id="sicxcyziru" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sicxcyziru table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zvxhdewlka thead, #zvxhdewlka tbody, #zvxhdewlka tfoot, #zvxhdewlka tr, #zvxhdewlka td, #zvxhdewlka th {
+#sicxcyziru thead, #sicxcyziru tbody, #sicxcyziru tfoot, #sicxcyziru tr, #sicxcyziru td, #sicxcyziru th {
   border-style: none;
 }
 
-#zvxhdewlka p {
+#sicxcyziru p {
   margin: 0;
   padding: 0;
 }
 
-#zvxhdewlka .gt_table {
+#sicxcyziru .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -676,12 +679,12 @@ Logical functions
   border-left-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_caption {
+#sicxcyziru .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zvxhdewlka .gt_title {
+#sicxcyziru .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -693,7 +696,7 @@ Logical functions
   border-bottom-width: 0;
 }
 
-#zvxhdewlka .gt_subtitle {
+#sicxcyziru .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -705,7 +708,7 @@ Logical functions
   border-top-width: 0;
 }
 
-#zvxhdewlka .gt_heading {
+#sicxcyziru .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -717,13 +720,13 @@ Logical functions
   border-right-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_bottom_border {
+#sicxcyziru .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_col_headings {
+#sicxcyziru .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -738,7 +741,7 @@ Logical functions
   border-right-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_col_heading {
+#sicxcyziru .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -758,7 +761,7 @@ Logical functions
   overflow-x: hidden;
 }
 
-#zvxhdewlka .gt_column_spanner_outer {
+#sicxcyziru .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -770,15 +773,15 @@ Logical functions
   padding-right: 4px;
 }
 
-#zvxhdewlka .gt_column_spanner_outer:first-child {
+#sicxcyziru .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zvxhdewlka .gt_column_spanner_outer:last-child {
+#sicxcyziru .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zvxhdewlka .gt_column_spanner {
+#sicxcyziru .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -790,11 +793,11 @@ Logical functions
   width: 100%;
 }
 
-#zvxhdewlka .gt_spanner_row {
+#sicxcyziru .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zvxhdewlka .gt_group_heading {
+#sicxcyziru .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -820,7 +823,7 @@ Logical functions
   text-align: left;
 }
 
-#zvxhdewlka .gt_empty_group_heading {
+#sicxcyziru .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -835,15 +838,15 @@ Logical functions
   vertical-align: middle;
 }
 
-#zvxhdewlka .gt_from_md > :first-child {
+#sicxcyziru .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zvxhdewlka .gt_from_md > :last-child {
+#sicxcyziru .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zvxhdewlka .gt_row {
+#sicxcyziru .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -862,7 +865,7 @@ Logical functions
   overflow-x: hidden;
 }
 
-#zvxhdewlka .gt_stub {
+#sicxcyziru .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -875,7 +878,7 @@ Logical functions
   padding-right: 5px;
 }
 
-#zvxhdewlka .gt_stub_row_group {
+#sicxcyziru .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -889,15 +892,15 @@ Logical functions
   vertical-align: top;
 }
 
-#zvxhdewlka .gt_row_group_first td {
+#sicxcyziru .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zvxhdewlka .gt_row_group_first th {
+#sicxcyziru .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zvxhdewlka .gt_summary_row {
+#sicxcyziru .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -907,16 +910,16 @@ Logical functions
   padding-right: 5px;
 }
 
-#zvxhdewlka .gt_first_summary_row {
+#sicxcyziru .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_first_summary_row.thick {
+#sicxcyziru .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zvxhdewlka .gt_last_summary_row {
+#sicxcyziru .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -926,7 +929,7 @@ Logical functions
   border-bottom-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_grand_summary_row {
+#sicxcyziru .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -936,7 +939,7 @@ Logical functions
   padding-right: 5px;
 }
 
-#zvxhdewlka .gt_first_grand_summary_row {
+#sicxcyziru .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -946,7 +949,7 @@ Logical functions
   border-top-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_last_grand_summary_row_top {
+#sicxcyziru .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -956,11 +959,11 @@ Logical functions
   border-bottom-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_striped {
+#sicxcyziru .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zvxhdewlka .gt_table_body {
+#sicxcyziru .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -969,7 +972,7 @@ Logical functions
   border-bottom-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_footnotes {
+#sicxcyziru .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -983,7 +986,7 @@ Logical functions
   border-right-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_footnote {
+#sicxcyziru .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -992,7 +995,7 @@ Logical functions
   padding-right: 5px;
 }
 
-#zvxhdewlka .gt_sourcenotes {
+#sicxcyziru .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1006,7 +1009,7 @@ Logical functions
   border-right-color: #D3D3D3;
 }
 
-#zvxhdewlka .gt_sourcenote {
+#sicxcyziru .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1014,72 +1017,72 @@ Logical functions
   padding-right: 5px;
 }
 
-#zvxhdewlka .gt_left {
+#sicxcyziru .gt_left {
   text-align: left;
 }
 
-#zvxhdewlka .gt_center {
+#sicxcyziru .gt_center {
   text-align: center;
 }
 
-#zvxhdewlka .gt_right {
+#sicxcyziru .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zvxhdewlka .gt_font_normal {
+#sicxcyziru .gt_font_normal {
   font-weight: normal;
 }
 
-#zvxhdewlka .gt_font_bold {
+#sicxcyziru .gt_font_bold {
   font-weight: bold;
 }
 
-#zvxhdewlka .gt_font_italic {
+#sicxcyziru .gt_font_italic {
   font-style: italic;
 }
 
-#zvxhdewlka .gt_super {
+#sicxcyziru .gt_super {
   font-size: 65%;
 }
 
-#zvxhdewlka .gt_footnote_marks {
+#sicxcyziru .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zvxhdewlka .gt_asterisk {
+#sicxcyziru .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zvxhdewlka .gt_indent_1 {
+#sicxcyziru .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zvxhdewlka .gt_indent_2 {
+#sicxcyziru .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zvxhdewlka .gt_indent_3 {
+#sicxcyziru .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zvxhdewlka .gt_indent_4 {
+#sicxcyziru .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zvxhdewlka .gt_indent_5 {
+#sicxcyziru .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zvxhdewlka .katex-display {
+#sicxcyziru .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zvxhdewlka div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#sicxcyziru div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1430,6 +1433,16 @@ Logical functions
 </div>
 </div>
 </div>
+<p>The table can be exporeted as <code>docx</code> for that a bit of additional coding.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>tbl_gt <span class="ot">&lt;-</span> tbl <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>           <span class="fu">as_gt</span>()</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>gt<span class="sc">::</span><span class="fu">gtsave</span>(tbl_gt, <span class="st">"../data/tbl_mental_health.docx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="../data/tbl_mental_health.docx">Here</a> is the table.</p>
 
 
 </section>
