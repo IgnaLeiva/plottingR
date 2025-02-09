@@ -67,7 +67,8 @@ website:
           text: Understanding Paths, Root, and Working Directory
         - href: content/data.qmd
           text: Data Sets
-
+        - href: content/data_format.qmd
+          text: Some examples
    
 
 format:
