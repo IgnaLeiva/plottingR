@@ -99,7 +99,7 @@ levels(new_data$Marital.status)
 
 ### A more drastic change
 
-If you need to work with factor/categoric using a different names or levels, and additionally you want to change the name of your variables, you could do this. (Remember that in R there are several ways to achieve the same result).
+If you need to work with factor/categorical using different level names, and additionally you want to change the name of your variables, you could do this. (Remember that in R there are several ways to achieve the same result).
 
 :::  {.callout-tip  icon=true collapse="true"}
 ## Logical functions
@@ -158,7 +158,7 @@ new_data <- data %>%
 
 ## Table 1
 
-There are several packages available for creating tables. Here I present the `{gtsummary}
+There are several packages available for creating tables. Here I present the `{gtsummary}`
 
 ```{r}
 library(gtsummary)
@@ -192,7 +192,7 @@ new_data %>%
 tbl
 ```
 
-The table can be exporeted as `docx` for that a bit of additional coding.
+The table can be exported as a `docx' for which a bit of additional coding is required.
 
 ```{r}
 #| eval: false
