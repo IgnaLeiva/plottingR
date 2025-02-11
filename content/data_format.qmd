@@ -45,7 +45,7 @@ names(data)
 
 ## Transform your data
 
-### A basinc approach 
+### A simple approach 
 
 :::  {.callout-tip  icon=true collapse="true"}
 
@@ -126,7 +126,7 @@ case_when(
 
 new_data <- data %>%
               mutate(
-                Age_group                        = case_when(
+                Age_group                  = case_when(
                                                 between(Age, 18, 20) ~ "18-20",
                                                 between(Age, 21, 22) ~ "21-22",
                                                 between(Age, 23, 24) ~ "23-24",

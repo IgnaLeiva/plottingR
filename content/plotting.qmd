@@ -1,0 +1,90 @@
+---
+title: Basic of `{ggplot2}`
+---
+
+### Getting Started
+
+1. **Load your library and data**
+```{r}
+#| message: false
+library(tidyverse)
+
+data <- read.csv("../data/Student_Mental_health.csv")
+
+```
+
+2. **Part of** `{ggplot2}`
+
+`{ggplot2}` has several relavant functions:
+
+- `ggplot()` with the **arguments**:
+
+    - `data`
+    - `aes`
+    - `geom`
+    - `stats`
+    - `facets`
+    - `scales`
+    - `theme`
+    - `labs`
+    - and a lot more.
+
+The key essential arguments are:  `data`, `aes`, `geom`. Then, you can customize your plot.
+
+Find the pre-processed data here
+
+```{r}
+#| code-fold: true
+data <- data %>%
+          mutate(gender = factor(Choose.your.gender))
+
+```
+
+The **basic**, here you see the data the `ggplot` and the **aesthetics**
+```{r}
+data %>%
+  ggplot(aes(x= gender)) 
+```
+
+Add a **geometric objects** (use `+`insted of `%>%`)
+
+    -   `geom_point()` → Scatter plot
+	-   `geom_line()` → Line plot
+	-   `geom_bar()` → Bar chart
+	-   `geom_histogram()` → Histogram
+	-   `geom_boxplot()` → Box plot
+	-   `geom_density()` → Density plot
+
+```{r}
+data %>%
+  ggplot(aes(x= gender)) +
+  geom_bar()
+```
+
+Modify the **axis**, add a title.
+
+```{r}
+data %>%
+  ggplot(aes(x= gender)) +
+  geom_bar() +
+  labs(
+    x     = "Gender classification",
+    y     = "Number of participants",
+    title = "Distribution of Gender"
+  )
+
+```
+
+You can also change the background using `theme_bw()`. The `theme()` function is highly customizable, allowing you to adjust various elements of your plot. `theme_bw()` is one of the predefined themes that provides a clean, minimalistic look with a white background and black grid lines.
+
+```{r}
+data %>%
+  ggplot(aes(x= gender)) +
+  geom_bar() +
+  labs(
+    x     = "Gender classification",
+    y     = "Number of participants",
+    title = "Distribution of Gender Frequency "
+  ) +
+  theme_bw()
+```
