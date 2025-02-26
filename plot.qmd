@@ -1,0 +1,77 @@
+---
+title: "Plot"
+format: html
+editor: visual
+---
+# Set your library
+```{r}
+library(tidyverse)
+
+```
+
+
+# Read data
+```{r}
+data <- read_csv("data/healthcare_dataset.csv")
+
+diab <- read_csv("data/diabetes_binary_health_indicators_BRFSS2015.csv")
+health_care <- read_csv("data/healthcare_dataset.csv")
+```
+
+# Continous Variables
+```{r}
+
+box_plot <- 
+health_care %>%
+    ggplot(aes(x = Age, 
+               y = Gender, 
+             #  group = Gender, 
+              # color = Gender,
+               fill = Gender)) +
+    geom_boxplot() +
+    theme_bw() +
+    scale_fill_manual(name = "Gender", 
+                      values = c("Female" = "#44AA99", 
+                                 "Male" = "#DDCC77")) +
+    coord_cartesian(xlim = c(10, 100)) +
+    scale_x_continuous(breaks = seq(10,100, 10)) +
+    labs(x = "Age in years",
+         #fill = "Another name" # this would also work if we decide not to use scale_fill_manual()
+         ) + 
+    theme(
+       axis.title.y = element_blank(), # also work labs(y = NULL or "")
+       axis.text.y = element_blank(),
+       axis.ticks.y = element_blank(),
+       panel.grid = element_blank(),
+       #legend.position = "right",
+       legend.position = c(0.9, .86),
+       legend.text = element_text(size =8),
+       legend.title = element_text(size =8, face = "bold"),
+       plot.margin = margin(10, 1, 1, 1) ## (Top, Right, Bottom, Left) 
+    )
+
+ggsave("boxplot.tiff", 
+       plot = box_plot, 
+       width = 5, height = 4, dpi = 300)
+
+
+```
+
+# Categorical data
+
+```{r}
+
+facet_plot <- 
+box_plot +  
+    facet_wrap(~ `Medical Condition`, ncol = 2) +
+    theme(legend.position = "bottom",
+     strip.background = element_rect(fill = "white", color = "black"),
+     strip.text = element_text(color = "black", size = 10, face = "italic"),
+     panel.spacing = unit(.3, "cm"))
+
+ggsave("facet.tiff", 
+       plot = facet_plot, 
+       width = 8, height = 10, dpi = 300)
+
+
+```
